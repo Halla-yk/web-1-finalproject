@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html{
+			height: 100%;
+		}
+	body{
+		
+		display: flex;
+		flex-direction: column;
+	}
+ *{
+ font-family: Tahoma;
+
+ }
+
+ ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+	margin-right: 40px;
+}
+ul li{
+	display: inline-block;
+	margin-right:40px; 
+
+
+
+}
+ul li a{
+	text-decoration:none;
+	color: black;
+	padding: 1px ; 
+	font-size: 13px;
+	font-weight: bold;
+
+}
+.active{
+float: left;
+position: absolute;
+top: 40px;
+width: 180PX;
+margin-left: -38%;
+margin-top: -20px;
+display: inline;
+font-weight: bold;
+font-size:32px
+}
+#img1{
+width: 80%;
+ height: 86%;
+  margin-left:-70px;
+  margin-top:50px; 
+  border-bottom: 20px;
+  position: absolute;
+  z-index: 1;
+  transform-origin: top left; 
+  transform: skew(10deg,0); 
+  border-bottom-right-radius:22%;
+  border-top-right-radius: 5%
+}
+#img2{
+position: absolute;
+z-index: 2; 
+width: 30%;
+padding-top:3%;
+ margin-left: 60% ;
+ margin-top:50px;
+}
+.hero{
+
+	
+	margin: 0 auto;
+	position: relative;
+}
+.hero-text{
+	background-image: url(banner.png);
+	width: 50%;
+	height: 100%;
+	float:left;
+
+}
+
+.hero-text{
+	padding-left: 70px
+}
+
+.who{
+	width: 100%
+	padding: 72px 0px 72px 0px;
+	background-color: #0AA2C0;
+	background-size: cover;
+	float: left;
+    padding-top: 50px;
+	padding-bottom: 50px;
+}
+	
+}
+.who2{
+	width: 100%
+	background-size: cover;
+	float: left;
+}
+
+.who .col{
+	width: 20%;
+	float: left;
+	padding: 0 15px;
+	margin: 20px
+
+}
+.who .col img{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.who .col .textBox{
+	border-radius: 15px;
+	padding:10%;
+	background-color: white;
+	width: 100%;
+	text-align: center;
+}
+
+
+
+footer{
+   background-color: black;
+   color: white;
+   padding: 5em;
+   margin-top: auto;
+}
+
+.column{
+   float: left;
+   padding-left: 6%;
+   padding-right: 6%;
+   border-bottom: 3px;
+   border-color: gray;
+
+}
+.box{
+	width: 50%;
+	padding: 20px;
+	background-color: grey;
+	color: white;
+}
+.contact-us{
+	
+	width: 500px;
+	background-color: #3176a3;
+	padding: 30px;
+	margin: 100px auto;
+	
+	bottom: 0;
+
+}
+.form-items .input{
+	width: 100%;
+	margin-bottom: 12px;
+	padding: 15px 40px;
+	box-sizing: border-box;
+	background: #244666;
+    border: 0;
+    border-radius: 20px;
+}
+.form-items .input.message{
+	resize: none;
+}
+.btn{
+	width: 100px;
+	height: 30px;
+	background: #ff7057;
+	text-align: center;
+	color: white;
+	
+	border-radius: 25px;
+}
+.rowdesign{
+	background-color:rgb(246, 246, 238);
+	padding: 12px;
+	width:450px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: red;
+}
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+/*  n */
+#topBtn{
+			display: none;
+			bottom: 15px;
+			right: 30px;
+			background-color:  rgba(18,163,230,0.92);
+			color: white;
+			font-size: 20px;
+			padding: 10px;
+			cursor: pointer;
+			position: fixed;
+		}
+		#btn{
+			background-color: lightblue;
+			color: white;
+			font-size: 50px;
+
+
+		}
+#img{
+     cursor: pointer;
+
+}
+#img:hover{
+ opacity: 0.7;
+}
+#myModal1{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+
+}
+
+.close{
+	font-size: 35px;
+	font-weight: bolder;
+	color: gray;
+	position: absolute;
+	top: 10px;
+	cursor: pointer;
+	right: 35px;
+
+}
+#imgmodal{
+	margin: auto; 
+	display: block;
+	width: 30%;
+	padding-top: 100px;
+	height: 60%;
+}
+#caption{
+	display: block;
+	z-index: 4;
+	margin: auto;
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	width: 80%;
+	height: 80px;
+
+}
+#imgmodal , #caption{
+	animation-name: scalling;
+	animation-duration: 0.6s;
+
+}
+@keyframes scalling{
+	from{transform: scale(0);}
+	to{transform:scale(1); }
+}
+.hi{
+	 background-color: blue; 
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+.card{
+
+}
+.dots{
+
+}
+.buttons{
+
+}
+.footerLinks{
+	text-decoration-line: none; 
+	color: white;
+
+}
+header h3:hover ,header a:hover{
+	color:  rgba(18,163,230,0.92);
+}
+.formlinks{
+	color: white;
+}
+.formlinks:hover{
+	color: gray;
+
+}
+#formbutton :hover{
+   background-color: blue;
+}
+.bluebuttons{
+	background-color: #77D9EC;
+}
+.bluebuttons:hover
+{
+	cursor: pointer;
+	background-color: blue;
+}
+</style>
+
+
+</head>
+<body>
+<header>
+
+    <div style="position: fixed; top: 0; right: 0; left: 0; background-color: white; 
+  box-shadow:0 -25px 50px; z-index: 3 " >
+
+ <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+   <ul >
+  <h3 class="active">Art Factory</h3>
+ 	<li><a href="#">HOME</a></li>
+ 	<li><a href="#">ABOUT</a></li>
+ 	<li><a href="#">SERVICES</a></li>
+    <li><a href="#">FREQUENTLY QUESTIONS</a></li>
+ 	<li><a href="#">BLOG</a></li>
+ 	<li><a href="#">CONTACT US</a></li>
+ 	</ul>
+ 	</div>
+ 
+<div>
+<img src="banner.png" id="img1">
+<img src="slider-icon.png" id="img2">
+
+	<div style="position: absolute;z-index: 2;margin-top:90px; color: white; margin-left: 10%;font-family: Tahoma;">
+		<div style="font-size: 60px; margin-top: 60px; ">Art Factory is free</div>
+		<p style="font-weight: bold; font-size: 60px; margin-top: 0px; font-family: Tahoma">For you</p>
+		<p >This template is avilable for 100% free of charge on TemplateMo.
+			<br>
+		Download, modify and use this for your business website.</p>
+		<button id = "b1" onmouseover = "document.getElementById('b1').style.backgroundColor='blue'; document.getElementById('b1').style.cursor ='pointer'"
+		onmouseout = "document.getElementById('b1').style.backgroundColor=' rgba(255,90,79,0.98)'"
+		style=" width: 27%;font-family: Arial Rounded MT; background-color:rgba(255,90,79,0.98) ;
+       border-radius: 25px; padding: 10px; border:none; font-size: 11px; color: white">FIND OUT MORE</button>
+	</div>
+</div>
+
+</header>
+<div></div>
+<div style="padding-top: 45%; padding-left:150px; padding-right: 100px" >
+	<img src="left.png"  style="width: 45%">
+<section  style="width: 45%; height: 100%; float:right; margin-left: 50px">
+				<div style="font-size: 30px; margin-top: 60px; color: black; font-weight: bold;">What is Software Engineering?</div>
+			<p style="font-family:Arial Rounded MT; padding:10px " >Software engineering is a branch of <a href="#" style="text-decoration-line: none;">computer science</a> <br><br> which includes the development and building of computer<br><br> systems software and applications software. Computer <br><br>systems software is composed of programs that include<br><br> computing utilities and operations systems. </p>
+            <br>
+	<button class = "bluebuttons"style="width: 35%; font-family: Arial Rounded MT;
+       border-radius:80px; padding: 20px;margin-left:1% ;font-weight: bold; border:none; font-size: 16px; color: white">Discover More</button>
+
+</div>
+
+	<div  style="padding-top: 10%">
+		<section  style="width: 45%; height: 100%; float:left; margin-left: 50px;">
+				<div style="font-size: 30px; margin-top: 60px; color: black; font-weight: bold;">Why Software is Popular?</div>
+			<p style="margin:10px">Here are important reasons behind the popularity of software engineering:</p>
+			<p><div style="float: left;"><img src="icon11.png"></div><div style="float: left;"><h3>Large software</h3><p style="margin-top: 0px"> It is quite more comfortable to build a wall than a house or building.</p></div></p>
+			<br>
+			<br><br><br><br>
+			<p><div style="float: left;"><img src="icon22.png">
+			</div><div style="float: left;"><h3>Dynamic Nature</h3><p style="margin-top: 0px"> Always growing and adapting nature of the software. </p></div></p>
+			<br>
+			<br><br><br><br>
+			<p><div style="float: left;"><img src="icon33.png"></div><div style="float: left;"><h3>Quality Management</h3><p style="margin-top: 0px">Offers better method of software development.</p></div></p>
+		</section>
+		<div style="float: left;"><img src="right.png "style="width: 85%"></div>
+		</div>
+		
+	  
+
+<section class="who" >
+		<div class="col" style="margin-left: 13%">
+			
+			<div class="textBox">
+				<img class = "card"src="icon1.png" style=" background-color: #77D9EC;  border-radius: 50px; padding: 15px">
+				<h4>First Box Service</h4>
+				<p>DescriptionCascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+				<button class = "buttons"style="background-color: #77D9EC;  border-radius: 20px; padding-top:12px;padding-bottom:12px; padding-right:20px; padding-left:20px; color: white;
+				font-weight: bold; border: none">Read More</button>
+			</div>
+		</div>
+
+		<div class="col">
+			
+				<div class="textBox">
+				<img class = "card" src="icon2.png" style="background-color: #77D9EC;  border-radius: 50px; padding: 15px">
+				<h4>second Box Service</h4>
+				<p>DescriptionCascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. </p>
+				<button class = "buttons" style="background-color: #77D9EC;  border-radius: 20px; padding-top:12px;padding-bottom:12px; padding-right:20px; padding-left:20px; color: white;
+				font-weight: bold; border: none">Discover More</button>
+			</div>
+		</div>
+	</div>
+
+		<div class="col" style="margin-right: 13%">
+			
+				<div class="textBox" >
+				<img class = "card" src="icon3.png" style="background-color: #77D9EC; border-radius: 50px; padding: 15px">
+				<h4>Third Box Service</h4>
+				<p>DescriptionCascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+				<button class = "buttons" style="background-color: #77D9EC;border-radius: 20px; padding-top:12px;padding-bottom:12px; padding-right:20px; padding-left:20px;color: white;
+				font-weight: bold; border: none">More details</button>
+			</div>
+		</div>
+	
+	<center><div class = "dots" onclick = "change(2)"style="width: 14px; height: 14px;  border-radius: 60px; background-color: white; margin-top:450px; margin-right:-55px"></div>
+           <div class = "dots" onclick = "change(1)"style="width: 14px; height: 14px;  border-radius: 60px; background-color: white; margin-top: -12.5px;"></div>
+            <div class = "dots" onclick = "change(0)" style="width: 14px; height: 14px; border-radius: 60px; background-color: white; margin-top: -14px; margin-right: 55px;"></div></center>
+</section>
+<div style="float: left">
+	<center><strong><h2>Frequently Asked Question</h2></strong></center>
+<center><p style="color:grey;">Vivamus venenatis eu mi ac mattis Maecenas ut elementum sapien<br>Nunc euismod risus as lobortis congue Sad erat quam</p></center>
+<div style="float: left;height: 400px; width: 400px; margin-left:150px;margin-top: 4%">
+	<strong><h3 style="font-weight: bolder;">Class Aptent Taciti Sociosqu Ad Litora<br>Torquent Per Conubia</h3></strong>
+	<div >Curabitur placerat diam in risus lobortis laoreet porttitor est elementum nulla When tags like and color attributes were added to the HTML  specification, it started a nightmare for web developers
+		<br>
+		<br>
+		Curabitur placerat diam in risus lobortis laoreet porttitor est elementum nulla When tags like and color attributes were added to the HTML  specification, it started a nightmare for web developers Development of large 
+		<br> 
+		<br>
+		<p> Email:<a href="email@company.com" style="text-decoration: none; color: rgba(18,163,230,0.92) ; font-weight: bold" >email@company.com </a></p>
+		<br>
+		<br>
+		<button class = "bluebuttons"style="border-radius: 20px; padding-top:12px;padding-bottom:12px; padding-right:20px; padding-left:20px;  color: white;
+				font-weight: bold; border: none">Contact us </button>
+		</div>
+	</div>
+	<div>
+	<div style="float: left; margin-left: 100px; margin-right:10px; margin-top: 4%;">
+<p class = " rowdesign">First Common Question</p>
+<p class = " rowdesign">Second Question Answer</p>
+<p class = " rowdesign">Therd Answer for you</p>
+<p class = " rowdesign">Forth Question Asked</p>
+<p class = " rowdesign">Fifth Ever Question </p>
+<p class = " rowdesign">Sixth Sense Question </p>
+</div>
+</div>
+</div>
+</div>
+
+</div><div class="who2">
+	<div class="contact-us" style="padding-left: 450px; padding-right: 450px">
+	
+	<p style="font-size: 30px; color: white; text-align: center">Art Factory</p>
+	
+		<ul >
+ 	<li><a class="formlinks" href="#" >HOME</a></li>
+ 	<li><a class="formlinks" href="#" >ABOUT</a></li>
+ 	<li><a class="formlinks" href="#" >SERVICES</a></li>
+ 	<li><a class="formlinks" href="#" >CONTACT US</a></li>
+ 	</ul>
+	
+	
+ 	<div class="form">
+ 		<div class="form-items">
+ 			<input type="text" class="input" name="userName"  placeholder="Name">
+ 		</div>
+ 		<div class="form-items">
+ 			<input type="text"  class="input" name="email" placeholder="Email" onblur="validateEmail(this);">
+ 		</div>
+ 		<div class="form-items">
+ 			<textarea class="input message"  class="input" cols="30" rows="10" placeholder="Message"></textarea>
+ 		</div>
+ 	</div>
+    <center><button id= "formbutton" onmouseover="document.getElementById('formbutton').style.backgroundColor = 'blue'" onmouseout="document.getElementById('formbutton').style.backgroundColor = '#ff7057'"style=" width: 30%; font-family: Arial Rounded MT;
+       border-radius:80px; background-color:#ff7057;  padding: 10px;margin-left:1% ;font-weight: bold; border:none; font-size: 16px; color: white">Send</button></center>
+       <center><a href="#"><img src="facebook.png" style="width: 35px; height: 35px; margin: 15px"></a>
+               <a href="#"><img src="twitter.png" style="width: 35px; height: 35px;margin: 15px"></a>
+               <a href="#"><img src="search.png" style="width: 35px; height: 35px;margin: 15px"></a></center>
+</div>
+</div>
+
+<footer>
+
+      <div class="column" style="border-bottom-color: #a1a1a1">
+      <div>
+            <h2>category</h2>
+            <p><a href="#" id ="a1"class="footerLinks" onmouseover="document.getElementById('a1').style.color = 'blue'" onmouseout="document.getElementById('a1').style.color = 'white'">shoes</a></p>
+           <p><a href="#" id ="a2"class="footerLinks" onmouseover="document.getElementById('a2').style.color = 'blue'" onmouseout="document.getElementById('a2').style.color = 'white'">About</a></p> 
+           <p><a href="#" id ="a3"class="footerLinks" onmouseover="document.getElementById('a3').style.color = 'blue'" onmouseout="document.getElementById('a3').style.color = 'white'">contact us</a></p>
+           
+         </div>
+      </div>
+      <div class="column">
+
+      <div>
+      	<h2>Company</h2>
+          <p><a href="#" id ="a5"class="footerLinks" onmouseover="document.getElementById('a5').style.color = 'blue'" onmouseout="document.getElementById('a5').style.color = 'white'">News</a></p>
+           <p><a href="#" id ="a6"class="footerLinks" onmouseover="document.getElementById('a6').style.color = 'blue'" onmouseout="document.getElementById('a6').style.color = 'white'">Email</a></p> 
+           <p><a href="#" id ="a7"class="footerLinks" onmouseover="document.getElementById('a7').style.color = 'blue'" onmouseout="document.getElementById('a7').style.color = 'white'">Fax</a></p>
+         </div>
+      </div>
+      <div class="column">
+      <div>
+            <h2>Address</h2>
+            <p>200, Green Street , NewYork</p>
+            <p>+657 8586 678</p>
+            <p>www.ArtFactory.com</p>
+         </div>
+      </div>
+      <div class="column" style="padding-right: 0px">
+            <h2>category</h2>
+            <form action="#">
+               <input type="text" name="address" placeholder="Enter Address" style="float: left;height: 27px; border-color:#3176a3 ">
+               <input type="button" name="search" value="search" style="background-color: #3176a3; border:none; font-size: 16px; color: white ; float: left; padding: 7px">
+               <center><a href="#"><img src="facebook.png" style="width: 35px; height: 35px; margin: 15px"></a>
+               <a href="#"><img src="twitter.png" style="width: 35px; height: 35px;margin: 15px"></a>
+               <a href="#"><img src="search.png" style="width: 35px; height: 35px;margin: 15px"></a>
+               <br>
+                <img src="facebook.png" id="img" alt="hello" style="width: 35px; height: 35px;margin: 15px">
+               <div id="myModal1">
+	           <span class="close">&times;</span>
+	            <img id="imgmodal">
+	            <div id="caption"></div>
+                </div>
+
+          </center>
+            </form>
+        
+      </div>
+      <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+  <a href="#">Blog</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+</footer>
+<button id="topBtn" onclick="topFunc()">Top</button>
+
+<script type="text/javascript">
+
+function myFunction() {
+  var winScroll = document.documentElement.scrollTop|| document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+function topFunc(){
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	var topBtn = document.getElementById('topBtn');
+	window.onscroll =function(){scroll() , myFunction()};
+
+	function scroll(){
+		if (document.documentElement.scrollTop > 20) {
+			topBtn.style.display = "block";
+		}else{
+			topBtn.style.display = "none";
+		}
+	}
+
+	var modal=document.getElementById("myModal1");
+	
+	var imgmodal=document.getElementById("imgmodal");
+    var img=document.getElementById("img");
+	var close=document.getElementsByClassName("close")[0];
+    var caption=document.getElementById("caption");
+
+    img.onclick=function(){
+    	modal.style.display="block";
+    	imgmodal.src=this.src;
+    	caption.innerHTML=this.alt;
+    }
+
+    close.onclick=function(){
+    modal.style.display="none";
+    }
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+//------------cards----------------/
+var cards = document.getElementsByClassName("card");
+var dots = document.getElementsByClassName("dots");
+var buttons = document.getElementsByClassName("buttons");
+
+function change(num) {
+	for (var i = 0; i < cards.length; i++) {
+		cards[i].style.backgroundColor ="#77D9EC" ;
+        buttons[i].style.backgroundColor = "#77D9EC" ;
+			}
+		
+     
+        cards[num].style.backgroundColor ="#3281a8";
+		buttons[num].style.backgroundColor = "#3281a8" ;
+}
+function validateEmail(emailField){
+	var reg = /@/ ;
+	if (reg.test(emailField.value)==false) {
+		alert ('Invlid email');
+		
+	}
+	
+}
+</script>
+</body>
+</html>
